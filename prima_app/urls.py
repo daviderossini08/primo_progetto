@@ -3,7 +3,7 @@ from prima_app.views import homepage, welcome, lista, chi_siamo, variabili, inde
 
 app_name="prima_app"
 urlpatterns = [
-    path('homepage', homepage, name='homepage'), # questa funzione definisce l'url
+    path('', homepage, name='homepage'), # questa funzione definisce l'url
     path('welcome', welcome, name='welcome'), # 'welcome' fa si che richimando questa funzione mi apra sta pagina (/welcome)
     path('lista', lista, name='lista'),
     path('chi_siamo', chi_siamo, name='chi_siamo'),
