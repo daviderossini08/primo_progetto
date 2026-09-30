@@ -17,3 +17,6 @@ def chi_siamo(request):
 def variabili(request):
     context = {'var1': '10', 'var2': 'ciao', 'var3': '123 hello world'}
     return render(request,"prima_app/variabili.html", context) #context sono le variabili stesse
+
+def index(request):
+    return render(request,"prima_app/index.html")
