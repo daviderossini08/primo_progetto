@@ -13,3 +13,6 @@ def es_if(request):
     'var3' : 300 }
     #Calling the render() method to render the request from es_if.html page by using the dictionary, dic
     return render(request, "es_if.html", dic)
+
+def if_else_elif(request):
+    return render(request,"if_else_elif.html")
