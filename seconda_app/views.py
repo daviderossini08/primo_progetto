@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 
 # Create your views here.
 
@@ -16,3 +17,7 @@ def es_if(request):
 
 def if_else_elif(request):
     return render(request,"if_else_elif.html")
+
+def es_for(request):
+    dic = { 'list1': [1, datetime.date(2019,7,16), 'Do not give up!'],'list2': [1, datetime.date(2019,7,16), 'Do not give up!'] }
+    return render(request, "es_for.html", dic)
