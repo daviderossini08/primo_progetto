@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {{block.super}} | Index {%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+    <ol>
+        <li><a href="{% url 'prima_app:somma'%}">somma</a></li>
+        <li><a href="{% url 'prima_app:media'%}">media</a></li>
+        <li><a href="{% url 'prima_app:voti'%}">voti</a></li>
+    </ol>
+    {%endblock content%}
+</body>
+</html>
