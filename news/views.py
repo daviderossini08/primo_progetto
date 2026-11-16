@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Articolo, Giornalista
 # Create your views here.
 
@@ -42,7 +42,13 @@ def home(request) :
     return render(request, "news/homepage.html", context)
 
 def articoloDetailView(request, pk):
-    # articolo = Articolo.objects.get(pk=pk)
-    articolo = get_object_or_404(Articolo, pk=pk)
+    articolo = Articolo.objects.get(pk=pk)
     context = {"articolo": articolo}
     return render(request, "news/articolo_detail.html", context)
+
+def lista_articoli(request, giornalista_id):
+    articoli = Articolo.objects.filter(giornalista_id=giornalista_id)
+    context = {
+        'articoli': articoli
+    }
+    return render (request, "news/lista_articoli.html", context)

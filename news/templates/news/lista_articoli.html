@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Articoli del giornalista
+{% endblock title %}
+
+{% block content %}
+    <h1>Articoli del giornalista:</h1>
+    <p> </p>
+    {% for articolo in articoli %}
+    <article>
+        <h2>{{ articolo.titolo }}</h2>
+        <p>{{ articolo.contenuto }}</p>
+        <p>Autore: {{ articolo.giornalista }}</p>
+    </article>
+    {%empty%}
+        <p>Nessun articolo trovato</p>
+    {%endfor%}
+
+{% endblock content %}

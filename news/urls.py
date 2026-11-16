@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import home, articoloDetailView
+from .views import home, articoloDetailView, lista_articoli
 
 app_name="news"
 
 urlpatterns = [
    path('', home, name="homeviews"),
-   path("articoli/<int:pk>", articoloDetailView, name="articolo_detail")
+   path("articoli/<int:pk>", articoloDetailView, name="articolo_detail"),
+   path("lista_articoli/<int:giornalista_id>", lista_articoli, name = "lista_articoli")
 ]
