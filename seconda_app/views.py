@@ -6,6 +6,9 @@ import datetime
 def index_root (request):
     return render(request,"index_root.html")
 
+def index (request):
+    return render(request,"seconda_app/index.html")
+
 def es_if(request):
     #https://www.decodejava.com/django-template-if-tag.htm
     #Creating a dictionary of key-value pairs
@@ -13,11 +16,11 @@ def es_if(request):
     'var2' : 200,
     'var3' : 300 }
     #Calling the render() method to render the request from es_if.html page by using the dictionary, dic
-    return render(request, "es_if.html", dic)
+    return render(request, "seconda_app/es_if.html", dic)
 
 def if_else_elif(request):
-    return render(request,"if_else_elif.html")
+    return render(request,"seconda_app/if_else_elif.html")
 
 def es_for(request):
     dic = { 'list1': [1, datetime.date(2019,7,16), 'Do not give up!'],'list2': [1, datetime.date(2019,7,16), 'Do not give up!'] }
-    return render(request, "es_for.html", dic)
+    return render(request, "seconda_app/es_for.html", dic)
